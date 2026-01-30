@@ -1,105 +1,39 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio BUT Réseaux et Télécommunications - Léo Sadoev</title>
+    <title>Portfolio Léo Sadoev - R&T</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
                     colors: {
-                        'cyber-blue': '#00D4FF',
-                        'cyber-purple': '#7C3AED',
-                        'cyber-pink': '#EC4899',
-                        'cyber-green': '#10B981',
-                        'dark-bg': '#0F0F23',
-                        'dark-surface': '#1A1A2E',
-                        'dark-card': '#16213E',
+                        primary: '#6366f1',   // Indigo
+                        secondary: '#ec4899', // Pink
+                        dark: '#0f172a',      // Slate 900
+                        surface: '#1e293b',   // Slate 800
                     },
                     animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'slide-up': 'slideUp 0.8s ease-out forwards',
-                        'fade-in': 'fadeIn 1s ease-out forwards',
-                        'bounce-subtle': 'bounceSubtle 2s infinite',
-                        'gradient': 'gradient 15s ease infinite',
-                        'scale-in': 'scaleIn 0.6s ease-out forwards',
-                        'pop-in': 'popIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards',
-                        'slide-in-left': 'slideInLeft 0.7s ease-out forwards',
-                        'slide-in-right': 'slideInRight 0.7s ease-out forwards',
-                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
-                        'cyber-glitch': 'cyberGlitch 3s ease-in-out infinite',
-                        'matrix-rain': 'matrixRain 20s linear infinite',
-                        'neon-pulse': 'neonPulse 1.5s ease-in-out infinite alternate',
-                        'circuit-flow': 'circuitFlow 8s linear infinite',
+                        'blob': 'blob 7s infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
                     },
                     keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' }
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
                         },
-                        glow: {
-                            'from': { boxShadow: '0 0 20px #00D4FF' },
-                            'to': { boxShadow: '0 0 30px #00D4FF, 0 0 40px #00D4FF' }
-                        },
-                        slideUp: {
-                            'from': { transform: 'translateY(30px)', opacity: '0' },
-                            'to': { transform: 'translateY(0)', opacity: '1' }
-                        },
-                        fadeIn: {
-                            'from': { opacity: '0' },
-                            'to': { opacity: '1' }
-                        },
-                        bounceSubtle: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-8px)' }
-                        },
-                        gradient: {
-                            '0%': { backgroundPosition: '0% 50%' },
-                            '50%': { backgroundPosition: '100% 50%' },
-                            '100%': { backgroundPosition: '0% 50%' }
-                        },
-                        scaleIn: {
-                            '0%': { transform: 'scale(0.8)', opacity: '0' },
-                            '100%': { transform: 'scale(1)', opacity: '1' }
-                        },
-                        popIn: {
-                            '0%': { transform: 'scale(0.5)', opacity: '0' },
-                            '100%': { transform: 'scale(1)', opacity: '1' }
-                        },
-                        slideInLeft: {
-                            '0%': { transform: 'translateX(-60px)', opacity: '0' },
-                            '100%': { transform: 'translateX(0)', opacity: '1' }
-                        },
-                        slideInRight: {
-                            '0%': { transform: 'translateX(60px)', opacity: '0' },
-                            '100%': { transform: 'translateX(0)', opacity: '1' }
-                        },
-                        pulseGlow: {
-                            '0%': { boxShadow: '0 0 5px #00D4FF' },
-                            '100%': { boxShadow: '0 0 25px #00D4FF, 0 0 50px #00D4FF' }
-                        },
-                        cyberGlitch: {
-                            '0%, 90%, 100%': { transform: 'translate(0)' },
-                            '20%': { transform: 'translate(-2px, 2px)' },
-                            '40%': { transform: 'translate(-2px, -2px)' },
-                            '60%': { transform: 'translate(2px, 2px)' },
-                            '80%': { transform: 'translate(2px, -2px)' }
-                        },
-                        matrixRain: {
-                            '0%': { transform: 'translateY(-100vh)' },
-                            '100%': { transform: 'translateY(100vh)' }
-                        },
-                        neonPulse: {
-                            'from': { textShadow: '0 0 10px #00D4FF, 0 0 20px #00D4FF, 0 0 30px #00D4FF' },
-                            'to': { textShadow: '0 0 5px #00D4FF, 0 0 10px #00D4FF, 0 0 15px #00D4FF' }
-                        },
-                        circuitFlow: {
-                            '0%': { strokeDashoffset: '1000' },
-                            '100%': { strokeDashoffset: '0' }
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
                 }
@@ -108,810 +42,452 @@
     </script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            background-color: #0F0F23;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        
+        /* Effet de verre dépoli (Glassmorphism) */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .cyber-gradient-bg {
-            background: linear-gradient(135deg, #0F0F23 0%, #1A1A2E 25%, #16213E 50%, #0E4B99 75%, #2563EB 100%);
-            background-size: 400% 400%;
-            animation: gradient 20s ease infinite;
-            position: relative;
-        }
-
-        .cyber-gradient-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0; /* Ensure it's behind content but above the main gradient */
-        }
-
-        .matrix-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            opacity: 0.05; /* Slightly reduced opacity */
-            overflow: hidden; /* Prevent matrix lines from extending beyond viewport */
-        }
-
-        .matrix-line {
-            position: absolute;
-            width: 2px;
-            height: 100px;
-            background: linear-gradient(to bottom, transparent, #00D4FF, transparent);
-            animation: matrixRain 15s linear infinite;
-        }
-
-        .section-padding {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-        }
-
-        .cyber-card {
-            background: linear-gradient(145deg, rgba(22, 33, 62, 0.8), rgba(26, 26, 46, 0.6));
-            border-radius: 1rem;
-            box-shadow:
-                0 8px 32px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            padding: 2.5rem;
-            margin-bottom: 2.5rem;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cyber-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
-            transition: left 0.6s;
-        }
-
-        .cyber-card:hover::before {
-            left: 100%;
-        }
-
-        .cyber-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow:
-                0 20px 40px rgba(0, 0, 0, 0.4),
-                0 0 30px rgba(0, 212, 255, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            border-color: rgba(0, 212, 255, 0.5);
-        }
-
-        .cyber-text-gradient {
-            background: linear-gradient(45deg, #00D4FF, #7C3AED, #EC4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradient 8s ease infinite;
-            background-size: 300% 300%;
-        }
-
-        .neon-text {
-            color: #00D4FF;
-            text-shadow:
-                0 0 5px #00D4FF,
-                0 0 10px #00D4FF,
-                0 0 15px #00D4FF;
-            animation: neonPulse 2s ease-in-out infinite alternate;
-        }
-
-        .profile-img {
-            width: 12rem;
-            height: 12rem;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: top;
-            border: 4px solid #00D4FF;
-            box-shadow:
-                0 0 30px rgba(0, 212, 255, 0.5),
-                0 0 60px rgba(0, 212, 255, 0.3),
-                inset 0 0 20px rgba(0, 212, 255, 0.1);
-            animation: glow 2s ease-in-out infinite alternate, float 6s ease-in-out infinite;
-            position: relative;
-        }
-
-        .cyber-button {
-            background: linear-gradient(45deg, #00D4FF, #7C3AED);
-            border: none;
-            border-radius: 50px;
-            padding: 1rem 2rem;
-            color: white;
-            font-weight: 600;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
         }
 
-        .cyber-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
         }
 
-        .cyber-button:hover::before {
-            left: 100%;
-        }
-
-        .cyber-button:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
-        }
-
-        .circuit-pattern {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1;
-            pointer-events: none;
-            z-index: 0; /* Ensure it's behind content */
-        }
-
-        .navbar-blur {
-            background: rgba(15, 15, 35, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.1); /* Subtle shadow for navbar */
-        }
-
-        .hover-scale {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .hover-scale:hover {
-            transform: scale(1.05) translateY(-2px);
-        }
-
-        .project-card { /* Renamed from .card for consistency with your new styles */
-            background: linear-gradient(145deg, rgba(22, 33, 62, 0.9), rgba(26, 26, 46, 0.7));
-            border-radius: 1rem;
-            padding: 2rem;
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card:hover {
-            border-color: rgba(0, 212, 255, 0.5);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
-        }
-
-        .animate-delay-100 { animation-delay: 0.1s; }
-        .animate-delay-200 { animation-delay: 0.2s; }
-        .animate-delay-300 { animation-delay: 0.3s; }
-        .animate-delay-400 { animation-delay: 0.4s; }
-        .animate-delay-500 { animation-delay: 0.5s; }
-        .animate-delay-600 { animation-delay: 0.6s; }
-        .animate-delay-700 { animation-delay: 0.7s; }
-
-        /* Scrollbar personnalisée */
+        /* Scrollbar moderne */
         ::-webkit-scrollbar {
             width: 8px;
         }
-
         ::-webkit-scrollbar-track {
-            background: #1A1A2E;
+            background: #0f172a;
         }
-
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #00D4FF, #7C3AED);
+            background: #334155;
             border-radius: 4px;
         }
-
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, #7C3AED, #EC4899);
+            background: #475569;
         }
     </style>
 </head>
-<body class="text-white min-h-screen bg-dark-bg">
-    <!-- Matrix Rain Background -->
-    <div class="matrix-bg">
-        <!-- Génération de 50 lignes de pluie matricielle pour un effet plus dense -->
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const matrixBg = document.querySelector('.matrix-bg');
-                const numLines = 50;
-                const bodyWidth = document.body.clientWidth;
-                const columnWidth = bodyWidth / numLines;
+<body class="antialiased selection:bg-primary selection:text-white">
 
-                for (let i = 0; i < numLines; i++) {
-                    const line = document.createElement('div');
-                    line.className = 'matrix-line';
-                    line.style.left = `${(Math.random() * 95)}%`; // Position aléatoire
-                    line.style.animationDelay = `${Math.random() * 5}s`; // Délai aléatoire
-                    line.style.height = `${50 + Math.random() * 150}px`; // Hauteur aléatoire
-                    line.style.animationDuration = `${5 + Math.random() * 15}s`; // Durée aléatoire
-                    matrixBg.appendChild(line);
-                }
-            });
-        </script>
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-secondary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 navbar-blur z-50 py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#accueil" class="text-2xl font-bold neon-text transition duration-300">Mon Portfolio</a>
-            <div class="space-x-6 hidden md:flex">
-                <a href="#about" class="text-gray-300 hover:text-cyber-blue transition duration-300 relative group">
-                    À propos
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-blue transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#competence" class="text-gray-300 hover:text-cyber-blue transition duration-300 relative group">
-                    Compétences
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-blue transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#projets" class="text-gray-300 hover:text-cyber-blue transition duration-300 relative group">
-                    Mes Projets
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-blue transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#projection" class="text-gray-300 hover:text-cyber-blue transition duration-300 relative group">
-                    Projection
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-blue transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#contact" class="text-gray-300 hover:text-cyber-blue transition duration-300 relative group">
-                    Contact
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-blue transition-all duration-300 group-hover:w-full"></span>
-                </a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-cyber-blue focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden navbar-blur py-2 mt-2">
-            <a href="#about" class="block px-4 py-2 text-gray-300 hover:bg-dark-card hover:text-cyber-blue transition duration-300">À propos</a>
-            <a href="#competence" class="block px-4 py-2 text-gray-300 hover:bg-dark-card hover:text-cyber-blue transition duration-300">Compétences</a>
-            <a href="#projets" class="block px-4 py-2 text-gray-300 hover:bg-dark-card hover:text-cyber-blue transition duration-300">Mes Projets</a>
-            <a href="#projection" class="block px-4 py-2 text-gray-300 hover:bg-dark-card hover:text-cyber-blue transition duration-300">Projection</a>
-            <a href="#contact" class="block px-4 py-2 text-gray-300 hover:bg-dark-card hover:text-cyber-blue transition duration-300">Contact</a>
+    <nav class="fixed w-full z-50 glass border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                        LS.
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-primary transition-colors duration-300 text-sm font-medium">À propos</a>
+                        <a href="#projets" class="hover:text-primary transition-colors duration-300 text-sm font-medium">Projets</a>
+                        <a href="#projection" class="hover:text-primary transition-colors duration-300 text-sm font-medium">Avenir</a>
+                        <a href="#contact" class="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all duration-300 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                </div>
         </div>
     </nav>
 
-    <!-- Section Accueil -->
-    <section id="accueil" class="min-h-screen flex items-center justify-center cyber-gradient-bg relative z-10 section-padding">
-        <div class="container mx-auto px-4 py-12 text-center relative z-20">
-            <header class="mb-12 animate-fade-in">
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 cyber-text-gradient animate-slide-up">
-                    Portfolio BUT Réseaux et Télécommunications
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-8 animate-slide-up animate-delay-200">
-                    Découvrez mon parcours, mes compétences et mes réalisations
-                </p>
-                <h2 class="text-4xl md:text-5xl font-bold neon-text animate-slide-up animate-delay-400 animate-cyber-glitch">
+    <section class="relative z-10 min-h-screen flex items-center justify-center pt-16">
+        <div class="text-center px-4 max-w-4xl mx-auto">
+            <div class="animate-fade-in-up">
+                <div class="inline-block p-1 rounded-full bg-gradient-to-tr from-primary to-secondary mb-6">
+                    <img src="moi.png" alt="Léo Sadoev" class="w-32 h-32 rounded-full border-4 border-dark object-cover" onerror="this.src='https://placehold.co/150x150/1e293b/6366f1?text=LS'">
+                </div>
+                <h2 class="text-primary font-medium tracking-wide uppercase text-sm mb-2">Portfolio Étudiant</h2>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
                     Léo Sadoev
-                </h2>
-                <p class="text-lg text-gray-400 mt-2 animate-slide-up animate-delay-600">
-                    IUT GRAND OUEST NORMANDIE
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Futur expert en <span class="text-white font-semibold">Réseaux & Télécommunications</span>.
+                    <br>Je construis, sécurise et optimise les infrastructures de demain.
                 </p>
-            </header>
-
-            <section class="mb-16">
-                <div class="relative inline-block mb-8">
-                    <!-- Image de profil -->
-                    <img src="moi.png" alt="Votre photo de profil" class="profile-img mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/192x192/00D4FF/ffffff?text=Votre+Photo';">
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#projets" class="px-8 py-3 rounded-full bg-primary text-white font-medium hover:bg-primary/90 transition-all shadow-lg shadow-primary/25">
+                        Voir mes projets
+                    </a>
+                    <a href="#about" class="px-8 py-3 rounded-full glass text-white font-medium hover:bg-white/10 transition-all">
+                        En savoir plus
+                    </a>
                 </div>
-                <a href="#about" class="cyber-button animate-bounce-subtle hover-scale">
-                    Découvrir mon parcours
-                </a>
-            </section>
-        </div>
-    </section>
-
-    <!-- Section À Propos -->
-    <section id="about" class="section-padding bg-dark-surface text-gray-200 relative">
-        <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 cyber-text-gradient animate-pop-in">
-                1. Présentation du Portfolio
-            </h2>
-            <div class="cyber-card animate-slide-in-left">
-                <h3 class="text-2xl font-semibold mb-4 neon-text">Mon Parcours, Mes Progrès</h3>
-                <p class="mb-4 text-gray-300 leading-relaxed">
-                    Ce portfolio est une documentation et une analyse de ma trajectoire de développement dans le cadre du BUT Réseaux et Télécommunications. Il a été conçu pour rendre compte de mes progrès, de mes difficultés rencontrées, et des compétences acquises à travers les différentes mises en situation professionnelle (Projet) et expériences.
-                </p>
-                <p class="mb-4 text-gray-300 leading-relaxed">
-                    Son objectif principal est de me permettre de devenir un acteur/auteur de ma propre formation, de développer ma capacité à avoir une démarche réflexive, d'acquérir de l'autonomie et des clés méthodologiques. Il m'aide à prendre de la distance sur mon évolution et à réguler ma démarche d'apprentissage.
-                </p>
-                <p class="text-gray-300 leading-relaxed">
-                    Vous y trouverez des "traces" et des "preuves" issues de mes travaux, réalisations et présentations, illustrant concrètement l'évolution de mes compétences.
-                </p>
-            </div>
-            <div class="cyber-card animate-slide-in-right animate-delay-200">
-                <h3 class="text-2xl font-semibold mb-4 neon-text">Objectifs de Développement</h3>
-                <p class="mb-4 text-gray-300 leading-relaxed">
-                    Ce portfolio sert également à articuler mes objectifs de développement académique et professionnel. Il est un outil dynamique, régulièrement mis à jour, qui me permet d'établir des liens entre les divers cours et concepts, et de fournir un aperçu constant de mes progrès.
-                </p>
-                <p class="text-gray-300 leading-relaxed">
-                    Mon parcours au sein du BUT Réseaux et Télécommunications m'équipe des connaissances et des savoir-faire essentiels pour exceller dans le domaine des réseaux, de la cybersécurité, et des télécommunications. Je m'engage à développer une approche critique et une capacité d'adaptation continue face aux évolutions technologiques.
-                </p>
             </div>
         </div>
     </section>
 
-    <!-- Section Définition de la Compétence -->
-    <section id="competence" class="section-padding bg-dark-bg text-gray-200 relative">
-        <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 cyber-text-gradient animate-pop-in">
-                2. La Compétence
-            </h2>
-            <div class="cyber-card animate-scale-in">
-                <h3 class="text-2xl font-semibold mb-4 neon-text">Qu'est-ce qu'une Compétence ?</h3>
-                <p class="mb-4 text-gray-300 leading-relaxed">
-                    Selon le cadre du BUT, une compétence est un "savoir-agir complexe" qui intègre des savoirs (Apprentissages critiques), des savoir-faire développés dans les Ressources, et des savoir-être. Elle est forgée par les actions menées dans le cadre des Projets (Situations d'Apprentissage et d'Évaluation), y compris les stages.
-                </p>
-                <p class="mb-4 text-gray-300 leading-relaxed">
-                    Une compétence se manifeste par :
-                </p>
-                <ul class="list-none space-y-3 mb-4">
-                    <li class="flex items-start">
-                        <span class="text-cyber-blue mr-3 mt-1">▶</span>
-                        <span class="text-gray-300">Le résultat de l'action et sa qualité.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-cyber-blue mr-3 mt-1">▶</span>
-                        <span class="text-gray-300">La qualité de la démarche qui mène au résultat.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-cyber-blue mr-3 mt-1">▶</span>
-                        <span class="text-gray-300">La justification de la démarche choisie.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-cyber-blue mr-3 mt-1">▶</span>
-                        <span class="text-gray-300">L'auto-évaluation de la qualité de son résultat et de la démarche.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-cyber-blue mr-3 mt-1">▶</span>
-                        <span class="text-gray-300">La capacité à démontrer que la compétence acquise peut être adaptée à d'autres situations.</span>
-                    </li>
-                </ul>
-                <p class="text-gray-300 leading-relaxed">
-                    Ce portfolio met en lumière comment j'ai développé et appliqué ces compétences dans des contextes réels.
-                </p>
+    <section id="about" class="relative z-10 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">À Propos du Portfolio</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Une démarche réflexive</h3>
+                    <p class="text-slate-400 leading-relaxed mb-4">
+                        Ce portfolio documente ma progression au sein du BUT R&T. Plus qu'une simple vitrine, c'est un outil d'analyse de mes compétences, allant de l'administration système à la cybersécurité.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Il témoigne de mon évolution : d'apprenant à acteur de ma formation, capable de justifier mes choix techniques et d'apprendre de mes expériences.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white">Savoir-Agir</h4>
+                            <p class="text-sm text-slate-400 mt-1">Combiner théorie et pratique pour résoudre des problèmes concrets.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white">Qualité & Rigueur</h4>
+                            <p class="text-sm text-slate-400 mt-1">Justification des démarches et auto-évaluation constante.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white">Polyvalence</h4>
+                            <p class="text-sm text-slate-400 mt-1">Adaptabilité face aux nouvelles technologies et situations.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Apprentissage Projets -->
-    <section id="projets" class="section-padding bg-dark-surface text-gray-200 relative">
-        <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 cyber-text-gradient animate-pop-in">
-                4. Apprentissage Projets
-            </h2>
-            <p class="text-center text-lg mb-8 text-gray-300">
-                Cette section est la plus importante de ce portfolio. Elle détaille les Situations d'Apprentissage et d'Évaluation (Projets) que j'ai réalisées, en mettant en avant mes acquis, mes réalisations et ma réflexion critique.
+    <section id="projets" class="relative z-10 py-24 bg-surface/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-medium tracking-wide uppercase text-sm">Mon expérience</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Projets & Réalisations</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    Une sélection de Situations d'Apprentissage et d'Évaluation (SAE) illustrant ma progression technique.
+                </p>
+            </div>
+
+            <div class="mb-12 border-l-2 border-primary/30 pl-6 ml-4 md:ml-0">
+                <h3 class="text-2xl font-bold text-white mb-8">1ère Année : Les Fondamentaux</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <article class="glass-card rounded-xl overflow-hidden flex flex-col h-full">
+                        <div class="h-2 bg-gradient-to-r from-red-500 to-orange-500"></div>
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h4 class="text-xl font-bold text-white">Hygiène Informatique</h4>
+                                <span class="text-xs font-mono py-1 px-2 rounded bg-red-500/10 text-red-400 border border-red-500/20">Projet 1.01</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-4">
+                                Étude des bonnes pratiques cybersécurité. Sensibilisation aux malwares, phishing et gestion des mots de passe.
+                            </p>
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center text-xs text-slate-500">
+                                    <span class="w-2 h-2 rounded-full bg-primary mr-2"></span> Rapport détaillé
+                                </div>
+                                <div class="flex items-center text-xs text-slate-500">
+                                    <span class="w-2 h-2 rounded-full bg-primary mr-2"></span> Présentation orale
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 mt-auto border-t border-white/5">
+                            <a href="Diapo SAE11.pdf" class="text-sm font-medium text-primary hover:text-white transition-colors flex items-center mt-4">
+                                Voir le rapport <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="glass-card rounded-xl overflow-hidden flex flex-col h-full">
+                        <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h4 class="text-xl font-bold text-white">Réseaux Locaux</h4>
+                                <span class="text-xs font-mono py-1 px-2 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Projet 1.02</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-4">
+                                Configuration de switchs et routeurs Cisco. Mise en place de VLANs et adressage IP pour segmenter un réseau d'entreprise.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-slate-700/50 px-2 py-1 rounded">Cisco Packet Tracer</span>
+                                <span class="text-xs bg-slate-700/50 px-2 py-1 rounded">VLAN</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 mt-auto border-t border-white/5">
+                            <a href="2-2960.pdf" class="text-sm font-medium text-primary hover:text-white transition-colors flex items-center mt-4">
+                                Voir config PDF <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="glass-card rounded-xl overflow-hidden flex flex-col h-full">
+                        <div class="h-2 bg-gradient-to-r from-green-500 to-emerald-500"></div>
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h4 class="text-xl font-bold text-white">Transmission</h4>
+                                <span class="text-xs font-mono py-1 px-2 rounded bg-green-500/10 text-green-400 border border-green-500/20">Projet 1.03</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-4">
+                                Analyse des supports physiques (Fibre Optique, Cuivre) et des technologies sans fil (Wi-Fi). Mesures de performance.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-slate-700/50 px-2 py-1 rounded">Wi-Fi</span>
+                                <span class="text-xs bg-slate-700/50 px-2 py-1 rounded">Fibre</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 mt-auto border-t border-white/5">
+                            <a href="./sadoev-hebert-matsahanga-yavuz-marzougue-SAE13- Photometrie.pdf" class="text-sm font-medium text-primary hover:text-white transition-colors flex items-center mt-4">
+                                Compte-rendu TP <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="glass-card rounded-xl overflow-hidden flex flex-col h-full">
+                        <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h4 class="text-xl font-bold text-white">Dev Web</h4>
+                                <span class="text-xs font-mono py-1 px-2 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Projet 1.04</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-4">
+                                Création d'une première page web personnelle. Apprentissage de la structure HTML et du style CSS.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-slate-700/50 px-2 py-1 rounded">HTML5</span>
+                                <span class="text-xs bg-slate-700/50 px-2 py-1 rounded">CSS3</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 mt-auto border-t border-white/5">
+                            <a href="https://drakyfr.github.io/NewGen-Game/" target="_blank" class="text-sm font-medium text-primary hover:text-white transition-colors flex items-center mt-4">
+                                Voir le site <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="glass-card rounded-xl overflow-hidden flex flex-col h-full">
+                        <div class="h-2 bg-gradient-to-r from-yellow-500 to-amber-500"></div>
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-4">
+                                <h4 class="text-xl font-bold text-white">Data Python</h4>
+                                <span class="text-xs font-mono py-1 px-2 rounded bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">Projet 1.05</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-4">
+                                Traitement et visualisation de données (logs réseau) via des scripts Python. Découverte des bibliothèques de data science.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-slate-700/50 px-2 py-1 rounded">Python</span>
+                                <span class="text-xs bg-slate-700/50 px-2 py-1 rounded">Matplotlib</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 mt-auto border-t border-white/5">
+                            <a href="./pokefish.py" class="text-sm font-medium text-primary hover:text-white transition-colors flex items-center mt-4">
+                                Voir le script <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="relative py-12 mb-12">
+                <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                    <div class="w-full border-t border-white/10"></div>
+                </div>
+                <div class="relative flex justify-center">
+                    <span class="bg-surface px-6 py-2 rounded-full border border-white/10 text-lg font-semibold text-primary shadow-lg">Bilan de la 1ère Année</span>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-8 mb-16 border-l-4 border-primary">
+                <p class="text-slate-300 leading-relaxed text-lg mb-4">
+                    Cette première année a été une transition cruciale. J'ai acquis le <strong>socle technique</strong> indispensable : de la couche physique à la couche applicative. 
+                </p>
+                <p class="text-slate-300 leading-relaxed text-lg">
+                    Au-delà de la technique, j'ai développé une <strong>méthode de travail rigoureuse</strong>. Je sais documenter mes actions, analyser mes erreurs et respecter les normes. Je suis désormais prêt à aborder des architectures plus complexes.
+                </p>
+            </div>
+
+            <div class="mb-12 border-l-2 border-secondary/30 pl-6 ml-4 md:ml-0">
+                <h3 class="text-2xl font-bold text-white mb-8">2ème Année : Complexité & Sécurité</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <article class="glass-card rounded-xl overflow-hidden relative group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-purple-600"></div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-6">
+                                <h4 class="text-2xl font-bold text-white">Infrastructure Réseau & Services</h4>
+                                <span class="text-sm font-bold bg-primary/20 text-primary px-3 py-1 rounded-full">Projet 2.01</span>
+                            </div>
+                            
+                            <p class="text-slate-400 mb-6 leading-relaxed">
+                                Un tournant majeur : construction d'une infrastructure complète en collaboration avec <strong>30 étudiants</strong>. Simulation d'un réseau d'entreprise interconnecté.
+                            </p>
+
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-center text-slate-300">
+                                    <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Routage dynamique OSPF inter-sites
+                                </li>
+                                <li class="flex items-center text-slate-300">
+                                    <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Services critiques : LDAP (Annuaire), DNS, DHCP
+                                </li>
+                                <li class="flex items-center text-slate-300">
+                                    <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Travail d'équipe et coordination massive
+                                </li>
+                            </ul>
+
+                            <div class="bg-black/20 rounded-lg p-4 mb-4">
+                                <p class="text-sm text-slate-400 italic">
+                                    "J'ai compris l'interdépendance des services. Faire fonctionner 'la totale' ensemble a été un véritable défi technique et humain."
+                                </p>
+                            </div>
+
+                            <a href="./PTI_OSPF_S1F0 (1).docx.pdf" class="inline-flex items-center text-primary hover:text-white transition-colors font-medium">
+                                Voir l'architecture OSPF
+                                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="glass-card rounded-xl overflow-hidden relative group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-pink-600"></div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-6">
+                                <h4 class="text-2xl font-bold text-white">Conception & Audit de Sécurité</h4>
+                                <span class="text-sm font-bold bg-secondary/20 text-secondary px-3 py-1 rounded-full">Projet 2.02</span>
+                            </div>
+                            
+                            <p class="text-slate-400 mb-6 leading-relaxed">
+                                Simulation "Red Team / Blue Team". Phase 1 : déploiement d'un réseau fonctionnel mais vulnérable. Phase 2 : Audit du réseau d'un autre groupe.
+                            </p>
+
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-center text-slate-300">
+                                    <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Déploiement de services Web, FTP, SSH, SQL
+                                </li>
+                                <li class="flex items-center text-slate-300">
+                                    <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Pentest & Scan de vulnérabilités
+                                </li>
+                                <li class="flex items-center text-slate-300">
+                                    <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    Rapport d'audit et préconisations (Hardening)
+                                </li>
+                            </ul>
+
+                            <div class="bg-black/20 rounded-lg p-4 mb-4">
+                                <p class="text-sm text-slate-400 italic">
+                                    "Se mettre dans la peau de l'attaquant est la meilleure façon de comprendre la défense. Ce projet a renforcé mon intérêt pour la cybersécurité."
+                                </p>
+                            </div>
+
+                            <a href="./rapport-audit-erhan-leo-noa-ryanM-rayanG-.md" class="inline-flex items-center text-secondary hover:text-white transition-colors font-medium">
+                                Lire le rapport d'audit
+                                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projection" class="relative z-10 py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-12">Projection & Avenir</h2>
+            
+            <div class="glass-card p-10 rounded-2xl mb-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-semibold text-primary mb-4">Bilan Global</h3>
+                <p class="text-slate-300 leading-relaxed mb-6 text-justify">
+                    Au terme de cette démarche, j'ai identifié mes forces : résolution de problèmes de routage, autonomie sur les nouveaux protocoles et aisance en équipe. J'ai construit une base solide en administration réseau, sécurité et développement.
+                </p>
+                <p class="text-slate-300 leading-relaxed text-justify">
+                    <strong>Axes d'amélioration :</strong> Approfondir la virtualisation (NFV), la sécurité offensive et l'automatisation d'infrastructure (Python/Ansible).
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-xl text-left hover:border-primary/50 transition-colors">
+                    <h4 class="text-xl font-bold text-white mb-2">Objectif Pro</h4>
+                    <p class="text-slate-400">Ingénieur Réseau & Sécurité.</p>
+                    <p class="text-slate-400 text-sm mt-2">Spécialisation 5G, Protection des données critiques et IoT.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl text-left hover:border-secondary/50 transition-colors">
+                    <h4 class="text-xl font-bold text-white mb-2">Poursuite d'études</h4>
+                    <p class="text-slate-400">Master Expert en Cybersécurité.</p>
+                    <p class="text-slate-400 text-sm mt-2">Certifications CCNA & CompTIA Security+.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="relative z-10 py-24 bg-surface/30">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Contactez-moi</h2>
+            <p class="text-slate-400 mb-12 text-lg">
+                Ouvert aux opportunités de stage et d'alternance.
             </p>
-
-            <div class="space-y-8">
-                <!-- Projet 1.01: Hygiène Informatique -->
-                <div class="cyber-card animate-slide-up animate-delay-100">
-                    <h3 class="text-3xl font-bold mb-6 neon-text">Projet 1.01 : Hygiène Informatique</h3>
-                    <div class="space-y-6">
-                        <div class="p-4 bg-gradient-to-r from-cyber-blue/10 to-cyber-purple/10 rounded-lg border-l-4 border-cyber-blue">
-                            <p class="text-gray-300">
-                                <strong class="text-cyber-blue">Objectifs et Compétences Visées :</strong>
-                                <ul class="list-none space-y-2 mt-2">
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Étude des bonnes pratiques en cybersécurité, gestion des mots de passe et protection contre les malwares.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Compétence visée : Administrer les réseaux et l'internet.
-                                    </li>
-                                </ul>
-                            </p>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-purple">Description des Travaux et Réalisations :</strong><br>
-                            J'ai mené une étude approfondie sur les principes fondamentaux de l'hygiène informatique. Cela a inclus la recherche sur les meilleures pratiques pour la création et la gestion de mots de passe robustes, l'identification des différents types de malwares et des méthodes de protection (antivirus, pare-feu), ainsi que la sensibilisation aux risques liés à l'hameçonnage et aux ingénieries sociales. J'ai rédigé un rapport détaillé et préparé une présentation PowerPoint pour synthétiser mes apprentissages.
-                        </p>
-                        <div class="mb-4">
-                            <p class="text-gray-300 font-semibold mb-2">Preuves (Traces) :</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <div class="bg-dark-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover-scale border border-cyber-purple/20">
-                                    <h4 class="text-xl font-semibold mb-3 text-cyber-blue">Rapport de Cybersécurité</h4>
-                                    <img src="https://placehold.co/400x250/16213E/00D4FF?text=Rapport+Cybers%C3%A9curit%C3%A9" alt="Rapport Cybersécurité" class="w-full h-40 object-cover rounded mb-3 border border-cyber-blue/10">
-                                    <p class="text-sm text-gray-400">Document présentant les bonnes pratiques et les menaces informatiques.</p>
-                                    <a href="Diapo SAE11.pdf" class="text-cyber-green hover:text-cyber-blue mt-2 inline-block font-medium">Voir le rapport</a>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-pink">Analyse et Positionnement sur la Compétence :</strong><br>
-                            J'ai acquis une bonne compréhension de l'importance de la sensibilisation à la cybersécurité. J'ai bien appréhendé les concepts de base des menaces et des défenses. Cependant, j'ai trouvé difficile de mémoriser tous les détails des différentes catégories de menaces et leurs mécanismes précis, ce qui indique un besoin d'approfondissement dans ce domaine.
-                        </p>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-blue">Réflexion et Auto-évaluation :</strong><br>
-                            Ce Projet a été très formateur pour ma prise de conscience des enjeux de sécurité dans un environnement connecté. J'ai appris que l'humain est souvent le maillon faible de la sécurité, d'où l'importance de la sensibilisation continue. À l'avenir, je devrai me concentrer sur des études de cas réels pour mieux comprendre la mise en œuvre pratique des mesures de sécurité et me familiariser davantage avec les techniques d'attaques et de défense. Cette compétence est directement applicable pour sécuriser les réseaux en sensibilisant les futurs utilisateurs et en mettant en place des politiques de sécurité robustes.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Projet 1.02: Réseaux Informatiques -->
-                <div class="cyber-card animate-slide-up animate-delay-200">
-                    <h3 class="text-3xl font-bold mb-6 neon-text">Projet 1.02 : Réseaux Informatiques</h3>
-                    <div class="space-y-6">
-                        <div class="p-4 bg-gradient-to-r from-cyber-blue/10 to-cyber-purple/10 rounded-lg border-l-4 border-cyber-blue">
-                            <p class="text-gray-300">
-                                <strong class="text-cyber-blue">Objectifs et Compétences Visées :</strong>
-                                <ul class="list-none space-y-2 mt-2">
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Configuration de réseaux locaux avec switchs et routeurs sur Cisco Packet Tracer.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Apprentissage des VLAN et de l'adressage IP.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Compétence visée : Connecter les entreprises et les usages.
-                                    </li>
-                                </ul>
-                            </p>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-purple">Description des Travaux et Réalisations :</strong><br>
-                            J'ai été chargé de simuler et de configurer un réseau informatique de petite taille à l'aide de Cisco Packet Tracer. Ce projet a impliqué la mise en place de commutateurs (switches) et de routeurs, la configuration de VLANs pour segmenter le trafic en différents domaines de diffusion, et l'implémentation d'un plan d'adressage IP cohérent. J'ai également expérimenté le routage entre VLANs pour permettre la communication entre les différents segments.
-                        </p>
-                        <div class="mb-4">
-                            <p class="text-gray-300 font-semibold mb-2">Preuves (Traces) :</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <div class="bg-dark-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover-scale border border-cyber-purple/20">
-                                    <h4 class="text-xl font-semibold mb-3 text-cyber-blue">Schéma Réseau Cisco Packet Tracer</h4>
-                                    <img src="image_86e225.png" alt="Image d'une carte topologique Zabbix, routeur Mikrotik CRS317-1G-16S+" class="w-full h-40 object-cover rounded mb-3 border border-cyber-blue/10" onerror="this.onerror=null;this.src='https://placehold.co/400x250/16213E/00D4FF?text=Sch%C3%A9ma+Packet+Tracer';">
-                                    <p class="text-sm text-gray-400">Visualisation du réseau configuré dans Packet Tracer.</p>
-                                    <a href="2-2960.pdf" target="_blank" class="text-cyber-green hover:text-cyber-blue mt-2 inline-block font-medium">Voir le fichier de configuration (PDF)</a>
-                                </div>
-                                <div class="bg-dark-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover-scale border border-cyber-purple/20">
-                                    <h4 class="text-xl font-semibold mb-3 text-cyber-blue">Captures d'Écran des Configurations</h4>
-                                    <img src="https://placehold.co/400x250/16213E/00D4FF?text=Captures+Config" alt="Captures de configurations" class="w-full h-40 object-cover rounded mb-3 border border-cyber-blue/10">
-                                    <p class="text-sm text-gray-400">Extraits des commandes CLI utilisées pour la configuration des VLANs et du routage.</p>
-                                    <a href="2-2960.pdf" target="_blank" class="text-cyber-green hover:text-cyber-blue mt-2 inline-block font-medium">Voir le fichier de configuration (PDF)</a>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-pink">Analyse et Positionnement sur la Compétence :</strong><br>
-                            Ce Projet a renforcé ma compréhension des concepts de base des réseaux informatiques. J'ai bien saisi l'importance de l'adressage IP et de la segmentation via les VLANs pour l'organisation et la sécurité du réseau. Cependant, j'ai rencontré quelques difficultés dans la configuration et le débogage des VLANs, notamment pour le routage inter-VLANs, ce qui a ralenti ma progression. Cela souligne un besoin de plus de pratique concrète et de résolution de problèmes.
-                        </p>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-blue">Réflexion et Auto-évaluation :</strong><br>
-                            Bien que j'aie eu des difficultés initiales avec les VLANs, ce Projet a été crucial pour solidifier mes bases en réseaux. J'ai appris la rigueur nécessaire dans la configuration et le débogage. Ma capacité à persévérer face à des problèmes techniques a été mise à l'épreuve et améliorée. Pour progresser, je devrai consacrer plus de temps à des exercices pratiques complexes et à l'exploration de scénarios de réseau plus avancés. Cette expérience est utile pour la configuration de réseaux dans de petites et moyennes entreprises.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Projet 1.03: Dispositifs de Transmission -->
-                <div class="cyber-card animate-slide-up animate-delay-300">
-                    <h3 class="text-3xl font-bold mb-6 neon-text">Projet 1.03 : Dispositifs de Transmission</h3>
-                    <div class="space-y-6">
-                        <div class="p-4 bg-gradient-to-r from-cyber-blue/10 to-cyber-purple/10 rounded-lg border-l-4 border-cyber-blue">
-                            <p class="text-gray-300">
-                                <strong class="text-cyber-blue">Objectifs et Compétences Visées :</strong>
-                                <ul class="list-none space-y-2 mt-2">
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Analyser les différentes technologies de transmission de données.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Comprendre le fonctionnement et les avantages de la fibre optique et du Wi-Fi.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Compétence visée : Connecter les entreprises et les usages.
-                                    </li>
-                                </ul>
-                            </p>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-purple">Description des Travaux et Réalisations :</strong><br>
-                            Ce Projet m'a permis d'étudier en profondeur les dispositifs et les technologies de transmission. J'ai effectué des recherches et des travaux pratiques sur la fibre optique, en comprenant ses principes de fonctionnement, ses avantages (débit, portée, immunité aux interférences) et ses contraintes (coût, installation). J'ai également exploré les différentes normes Wi-Fi, leurs évolutions et leurs applications. Le Projet a inclus une étude de cas sur le déploiement de la fibre optique dans un contexte d'entreprise et des manipulations en laboratoire sur les dispositifs Wi-Fi.
-                        </p>
-                        <div class="mb-4">
-                            <p class="text-gray-300 font-semibold mb-2">Preuves (Traces) :</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <div class="bg-dark-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover-scale border border-cyber-purple/20">
-                                    <h4 class="font-semibold text-xl mb-3 text-cyber-blue">Compte-rendu TP Wi-Fi</h4>
-                                    <img src="https://placehold.co/400x250/16213E/00D4FF?text=Compte-rendu+TP+WiFi" alt="Compte-rendu TP Wi-Fi" class="w-full h-40 object-cover rounded mb-3 border border-cyber-blue/10">
-                                    <p class="text-sm text-gray-400">Rapport des manipulations effectuées sur les équipements Wi-Fi et les mesures de performance.</p>
-                                    <a href="./sadoev-hebert-matsahanga-yavuz-marzougue-SAE13- Photometrie.pdf" class="text-cyber-green hover:text-cyber-blue mt-2 inline-block font-medium">Voir le compte-rendu</a>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-pink">Analyse et Positionnement sur la Compétence :</strong><br>
-                            J'ai trouvé ce Projet particulièrement intéressant. J'ai parfaitement compris les principes physiques et les avantages techniques de la fibre optique, ainsi que les différences entre les différentes générations de Wi-Fi. Ma capacité à analyser des données techniques et à les synthétiser dans des rapports a été fortement renforcée. Je me sens capable de conseiller sur le choix des technologies de transmission en fonction des besoins d'une infrastructure.
-                        </p>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-blue">Réflexion et Auto-évaluation :</strong><br>
-                            Ce Projet a été un succès pour moi. J'ai pris conscience de l'importance capitale du choix des technologies physiques dans la performance et la fiabilité d'un réseau. Cela m'a poussé à vouloir en apprendre davantage sur les infrastructures de télécommunications de grande envergure. Je pense que cette compétence est fondamentale pour la conception de réseaux d'entreprise, car elle permet de choisir les dispositifs de transmission les plus adaptés aux contraintes spécifiques de chaque environnement.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Projet 1.04: Présence Web -->
-                <div class="cyber-card animate-slide-up animate-delay-400">
-                    <h3 class="text-3xl font-bold mb-6 neon-text">Projet 1.04 : Présence Web</h3>
-                    <div class="space-y-6">
-                        <div class="p-4 bg-gradient-to-r from-cyber-blue/10 to-cyber-purple/10 rounded-lg border-l-4 border-cyber-blue">
-                            <p class="text-gray-300">
-                                <strong class="text-cyber-blue">Objectifs et Compétences Visées :</strong>
-                                <ul class="list-none space-y-2 mt-2">
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Créer une page web personnelle en utilisant HTML et CSS.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Comprendre les bases du développement web et de la conception d'interfaces.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Compétence visée : Créer des outils et applications pour les R&T.
-                                    </li>
-                                </ul>
-                            </p>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-purple">Description des Travaux et Réalisations :</strong><br>
-                            L'objectif de ce Projet était de développer ma première page web statique. J'ai utilisé HTML pour structurer le contenu de la page (présentation personnelle, parcours, centres d'intérêt) et CSS pour la mise en forme et le style (couleurs, polices, mise en page responsive). J'ai appris à organiser mon code, à utiliser les sélecteurs CSS et à m'assurer que la page s'affiche correctement sur différents appareils. La page a ensuite été hébergée pour être accessible en ligne.
-                        </p>
-                        <div class="mb-4">
-                            <p class="text-gray-300 font-semibold mb-2">Preuves (Traces) :</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <div class="bg-dark-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover-scale border border-cyber-purple/20">
-                                    <h4 class="text-xl font-semibold mb-3 text-cyber-blue">Capture d'Écran de la Page Web</h4>
-                                    <img src="https://placehold.co/400x250/16213E/00D4FF?text=Page+Web+Projet+1.04" alt="Capture d'écran de la page Web Projet 1.04" class="w-full h-40 object-cover rounded mb-3 border border-cyber-blue/10">
-                                    <p class="text-sm text-gray-400">Aperçu de la page web personnelle réalisée.</p>
-                                    <a href="https://drakyfr.github.io/NewGen-Game/" class="text-cyber-green hover:text-cyber-blue mt-2 inline-block font-medium">Voir la page en ligne</a>
-                                </div>
-                                <div class="bg-dark-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover-scale border border-cyber-purple/20">
-                                    <h4 class="text-xl font-semibold mb-3 text-cyber-blue">Fichier index.html</h4>
-                                    <img src="https://placehold.co/400x250/16213E/00D4FF?text=Code+HTML" alt="Code HTML" class="w-full h-40 object-cover rounded mb-3 border border-cyber-blue/10">
-                                    <p class="text-sm text-gray-400">Extrait du code HTML structurant la page.</p>
-                                    <a href="https://github.com/DrakyFR/NewGen-Game/blob/main/index.html" class="text-cyber-green hover:text-cyber-blue mt-2 inline-block font-medium">Voir le code HTML</a>
-                                </div>
-                                <div class="bg-dark-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover-scale border border-cyber-purple/20">
-                                    <h4 class="text-xl font-semibold mb-3 text-cyber-blue">Fichier style.css</h4>
-                                    <img src="https://placehold.co/400x250/16213E/00D4FF?text=Code+CSS" alt="Code CSS" class="w-full h-40 object-cover rounded mb-3 border border-cyber-blue/10">
-                                    <p class="text-sm text-gray-400">Extrait du code CSS pour le style et le design responsive.</p>
-                                    <a href="https://github.com/DrakyFR/NewGen-Game/tree/main/css" class="text-cyber-green hover:text-cyber-blue mt-2 inline-block font-medium">Voir le code CSS</a>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-pink">Analyse et Positionnement sur la Compétence :</strong><br>
-                            J'ai beaucoup apprécié ce projet, qui m'a permis de découvrir les fondamentaux du développement web. J'ai été capable de produire une page web fonctionnelle avec une mise en page correcte. J'ai bien compris la séparation entre la structure (HTML) et la présentation (CSS). Cependant, la maîtrise des concepts de design responsive et des spécificités des navigateurs demandera plus de pratique.
-                        </p>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-blue">Réflexion et Auto-évaluation :</strong><br>
-                            Ce Projet a ouvert la porte au monde du développement web, un domaine que je trouve très stimulant. J'ai appris à transformer une idée en une interface visuelle. Pour l'avenir, je souhaite explorer des frameworks CSS comme Tailwind CSS (que j'utilise ici pour mon portfolio !) et des librairies JavaScript pour rendre mes pages plus interactives. Cette compétence est très utile pour créer des interfaces utilisateur pour des outils ou applications réseau, ou pour la documentation technique.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Projet 1.05: Traitement de Données -->
-                <div class="cyber-card animate-slide-up animate-delay-500">
-                    <h3 class="text-3xl font-bold mb-6 neon-text">Projet 1.05 : Traitement de Données</h3>
-                    <div class="space-y-6">
-                        <div class="p-4 bg-gradient-to-r from-cyber-blue/10 to-cyber-purple/10 rounded-lg border-l-4 border-cyber-blue">
-                            <p class="text-gray-300">
-                                <strong class="text-cyber-blue">Objectifs et Compétences Visées :</strong>
-                                <ul class="list-none space-y-2 mt-2">
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Utiliser Python pour analyser et visualiser des données.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Traiter des données réseau, telles que les logs de trafic ou les mesures de performance.
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-cyber-green mr-2">✓</span>
-                                        Compétence visée : Créer des outils et applications pour les R&T.
-                                    </li>
-                                </ul>
-                            </p>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-purple">Description des Travaux et Réalisations :</strong><br>
-                            L'objectif de ce Projet était de manipuler et d'analyser des ensembles de données avec Python. J'ai appris à importer des données depuis différents formats (CSV, JSON), à les nettoyer, à effectuer des calculs statistiques de base, et à les visualiser à l'aide de bibliothèques comme Matplotlib ou Seaborn. En particulier, j'ai travaillé sur des logs de trafic réseau pour identifier des tendances ou des anomalies.
-                        </p>
-                        <div class="mb-4">
-                            <p class="text-gray-300 font-semibold mb-2">Preuves (Traces) :</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <div class="bg-dark-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover-scale border border-cyber-purple/20">
-                                    <h4 class="text-xl font-semibold mb-3 text-cyber-blue">Script Python d'Analyse</h4>
-                                    <img src="https://placehold.co/400x250/16213E/00D4FF?text=Script+Python" alt="Script Python" class="w-full h-40 object-cover rounded mb-3 border border-cyber-blue/10">
-                                    <p class="text-sm text-gray-400">Code Python utilisé pour l'analyse des logs réseau.</p>
-                                    <a href="./pokefish.py" class="text-cyber-green hover:text-cyber-blue mt-2 inline-block font-medium">Voir le script</a>
-                                </div>
-                                <div class="bg-dark-card p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover-scale border border-cyber-purple/20">
-                                    <h4 class="text-xl font-semibold mb-3 text-cyber-blue">Graphique de Trafic Réseau</h4>
-                                    <img src="https://placehold.co/400x250/16213E/00D4FF?text=Graphique+Trafic" alt="Graphique de Trafic Réseau" class="w-full h-40 object-cover rounded mb-3 border border-cyber-blue/10">
-                                    <p class="text-sm text-gray-400">Visualisation des données de trafic extraites des logs.</p>
-                                    <a href="./Pokedex.pdf" class="text-cyber-green hover:text-cyber-blue mt-2 inline-block font-medium">Voir le graphique</a>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-pink">Analyse et Positionnement sur la Compétence :</strong><br>
-                            J'ai acquis les bases de la programmation en Python pour le traitement de données. J'ai compris comment charger, manipuler et effectuer des opérations simples sur des datasets. Les défis sont apparus avec les gros volumes de données, nécessitant une optimisation des scripts et une meilleure compréhension des performances des algorithmes. Ma capacité à interpréter les données brutes et à en tirer des conclusions par la visualisation s'est améliorée.
-                        </p>
-                        <p class="text-gray-300 leading-relaxed">
-                            <strong class="text-cyber-blue">Réflexion et Auto-évaluation :</strong><br>
-                            Ce Projet m'a montré la puissance de Python pour l'automatisation et l'analyse dans le domaine des réseaux. J'ai compris que l'analyse de données est essentielle pour le diagnostic et l'optimisation des infrastructures. Pour progresser, je devrai me concentrer sur des techniques avancées de manipulation de données (ex: Pandas) et l'application de méthodes statistiques plus complexes. Cette compétence est très pertinente pour l'automatisation de l'analyse de performances réseau et la détection proactive de problèmes.
-                        </p>
-                    </div>
-                </div>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="mailto:leosadoev@gmail.com" class="flex items-center justify-center px-8 py-4 rounded-xl glass hover:bg-white/10 transition-all group">
+                    <svg class="w-6 h-6 mr-3 text-primary group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v9a2 2 0 002 2z"></path></svg>
+                    <span class="font-medium text-white">leosadoev@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/l%C3%A9o-sadoev-9442b6347/" target="_blank" class="flex items-center justify-center px-8 py-4 rounded-xl glass hover:bg-[#0077b5]/20 transition-all group">
+                    <svg class="w-6 h-6 mr-3 text-[#0077b5] group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span class="font-medium text-white">LinkedIn</span>
+                </a>
+                <a href="https://github.com/DrakyFR" target="_blank" class="flex items-center justify-center px-8 py-4 rounded-xl glass hover:bg-white/10 transition-all group">
+                    <svg class="w-6 h-6 mr-3 text-white group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span class="font-medium text-white">GitHub</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Section Projection -->
-    <section id="projection" class="section-padding bg-dark-bg text-gray-200 relative">
-        <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 cyber-text-gradient animate-pop-in">
-                6. Projection et Bilan Global
-            </h2>
-            <div class="cyber-card animate-slide-in-left">
-                <h3 class="text-2xl font-semibold mb-4 neon-text">Évaluation Globale de Mon Parcours</h3>
-                <p class="mb-4 text-gray-300 leading-relaxed">
-                    Au terme de cette démarche de portfolio, je procède à une évaluation globale de mon parcours. Ce travail m'a permis de prendre pleinement conscience du travail accompli et des progrès significatifs réalisés depuis le début de ma formation en BUT Réseaux et Télécommunications.
-                </p>
-                <p class="mb-4 text-gray-300 leading-relaxed">
-                    J'ai pu identifier mes forces, notamment ma capacité à résoudre des problèmes complexes de routage, mon autonomie dans l'apprentissage de nouveaux protocoles, et mon aisance à travailler en équipe sur des projets d'envergure. Les Projets et les différentes expériences m'ont doté d'une base solide en administration réseau, sécurité informatique, et développement d'applications distribuées.
-                </p>
-                <p class="text-gray-300 leading-relaxed">
-                    Quant aux axes d'amélioration, j'aimerais approfondir mes connaissances en virtualisation des fonctions réseau (NFV), sécurité offensive, et automatisation avec Python pour l'infrastructure. Je suis déterminé à continuer mon apprentissage et à relever de nouveaux défis.
-                </p>
-            </div>
-            <div class="cyber-card animate-slide-in-right animate-delay-200">
-                <h3 class="text-2xl font-semibold mb-4 neon-text">Mes Prochaines Étapes Professionnelles et Académiques</h3>
-                <p class="mb-4 text-gray-300 leading-relaxed">
-                    Mon projet professionnel s'orientera vers un poste d'ingénieur réseau dans une grande entreprise. Je suis passionné par les architectures de réseaux 5G, la protection des données critiques, et l'IoT et les réseaux associés.
-                </p>
-                <p class="text-gray-300 leading-relaxed">
-                    Pour y parvenir, je prévois de poursuivre mes études en Master spécialisé en Cybersécurité, de passer des certifications industrielles (ex: CCNA, CompTIA Security+), et de participer à des hackathons et des projets open source. Je suis convaincu que les compétences et la démarche réflexive acquises durant ce BUT seront des atouts majeurs pour l'avenir.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="section-padding bg-dark-bg text-gray-200 relative">
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 cyber-text-gradient animate-pop-in">
-                Contactez-moi
-            </h2>
-            <div class="cyber-card max-w-2xl mx-auto animate-scale-in">
-                <p class="text-lg mb-6 text-gray-300">
-                    N'hésitez pas à me contacter si vous souhaitez en savoir plus sur mon parcours ou si vous avez des opportunités à discuter.
-                </p>
-                <div class="flex flex-col space-y-4">
-                    <a href="mailto:leosadoev@gmail.com" class="cyber-button">
-                        Email : leosadoev@gmail.com
-                    </a>
-                    <a href="https://www.linkedin.com/in/l%C3%A9o-sadoev-9442b6347/" target="_blank" class="cyber-button bg-gray-700 hover:bg-gray-600">
-                        LinkedIn : Mon Profil
-                    </a>
-                    <a href="https://github.com/DrakyFR" target="_blank" class="cyber-button bg-gray-700 hover:bg-gray-600">
-                        GitHub : Mon Profil
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark-surface text-gray-400 py-8 text-center mt-12 relative z-10 border-t border-cyber-blue/10">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2023 Léo Sadoev. Tous droits réservés.</p>
-            <p class="mt-2">Réalisé avec passion pour le BUT Réseaux et Télécommunications.</p>
-        </div>
+    <footer class="py-8 text-center text-slate-600 text-sm border-t border-white/5">
+        <p>&copy; 2023 Léo Sadoev. IUT Grand Ouest Normandie.</p>
     </footer>
 
-    <!-- Script pour l'effet de ripple sur les boutons et menu mobile -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Effet de ripple sur les boutons .cyber-button
-            document.querySelectorAll('.cyber-button').forEach(element => {
-                element.addEventListener('click', function(e) {
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-
-                    ripple.style.width = ripple.style.height = size + 'px';
-                    ripple.style.left = x + 'px';
-                    ripple.style.top = y + 'px';
-                    ripple.className = 'absolute rounded-full bg-white opacity-25 animate-ping';
-
-                    this.style.position = 'relative';
-                    this.style.overflow = 'hidden';
-                    this.appendChild(ripple);
-
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                });
-            });
-
-            // Bascule du menu mobile
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-
-                // Ferme le menu mobile lorsqu'un lien est cliqué
-                mobileMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
-            }
-
-            // Défilement fluide pour les liens d'ancrage
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-            // Optimisation optionnelle des performances pour les événements de défilement
-            let ticking = false;
-            function updateOnScroll() {
-                // Ajouter ici toute animation basée sur le défilement si nécessaire
-                ticking = false;
-            }
-
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    requestAnimationFrame(updateOnScroll);
-                    ticking = true;
-                }
-            });
-        });
-    </script>
 </body>
 </html>
